@@ -1,0 +1,20 @@
+@use "../abstracts/" as *;
+
+.info-grid {
+  --grid-row-gap: #{size(75)};
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  row-gap: var(--grid-row-gap, $grid-gap);
+
+  @include mq(medium) {
+    --grid-row-gap: #{size(72)};
+  }
+
+  @include mq(large) {
+    grid-template-columns: 60% 40%;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+  }
+}

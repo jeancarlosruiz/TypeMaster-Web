@@ -1,17 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Mentor | Typemaster pre-launch landing page</title>
+    <link rel="stylesheet" href="/sass/main.scss" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vite App</title>
-  <link rel="stylesheet" href="/sass/main.scss">
-</head>
+  <body>
+    <main class="container-wide hidden">
+      <!-- HEADER -->
+      <header class="primary-header | container padding-inline">
+        <img src="assets/shared/logo.svg" alt="Logo" />
+        <button class="button" data-type="header">Pre-order now</button>
+      </header>
 
-<body>
+      <!-- HERO SECTION -->
+      <section class="hero-section | hero-grid container">
+        <div class="hero | padding-inline">
+          <h1 class="fs-900 fw-bold uppercase clr-neutral-900">
+            Typemaster keyboard
+          </h1>
+          <p class="fs-300 clr-neutral-400 fw-regular">
+            Improve your productivity and gaming without breaking the bank.
+            Upgrade to a high quality mechanical typing experience.
+          </p>
 
-  <script type="module" src="/main.js"></script>
-</body>
+          <div class="flex-group">
+            <button class="button" data-type="accent">Pre-order now</button>
+            <span class="clr-neutral-400 uppercase fw-medium"
+              >Release on 5/27</span
+            >
+          </div>
+        </div>
 
+        <picture>
+          <source
+            media="(max-width:720px)"
+            srcset="assets/mobile/image-keyboard.jpg"
+          />
+          <source
+            media="(max-width:960px)"
+            srcset="assets/tablet/image-keyboard.jpg"
+          />
+          <img
+            class="hero-img | border-radius"
+            src="assets/desktop/image-keyboard.jpg"
+            alt="Image keyboard"
+          />
+        </picture>
+      </section>
+
+      <!-- INFO SECTION -->
+      <section class="info-section | info-grid container">
+        <div class="info-section-container">
+          <picture class="border-radius hidden" data-type="multiply">
+            <source
+              media="(max-width:720px)"
+              srcset="assets/mobile/image-phone-and-keyboard.jpg"
+            />
+            <source
+              media="(max-width:960px)"
+              srcset="assets/tablet/image-phone-and-keyboard.jpg"
+            />
+            <img
+              class="info-img"
+              src="assets/desktop/image-phone-and-keyboard.jpg"
+              alt="Image phone and keyboad"
+            />
+          </picture>
+          <picture>
+            <source
+              media="(max-width:720px)"
+              srcset="assets/mobile/image-glass-and-keyboard.jpg"
+            />
+            <source
+              media="(max-width:960px)"
+              srcset="assets/tablet/image-glass-and-keyboard.jpg"
+            />
+            <img
+              class="info-img | border-radius"
+              src="assets/desktop/image-glass-and-keyboard.jpg"
+              alt="Image glass and keyboad"
+            />
+          </picture>
+        </div>
+        <div class="info | flex-group padding-inline">
+          <h2 class="fs-800 fw-bold clr-neutral-900 uppercase">
+            Mechanical wireless keyboard
+          </h2>
+          <p class="fs-300 fw-regular clr-neutral-400">
+            The Typemaster keyboard boasts top-notch build and practical design.
+            It offers a wide variety of switches and keycaps, along with
+            reliable wireless connectivity.
+          </p>
+        </div>
+      </section>
+      <!-- Cards Section -->
+      <section class="cards-section | cards-grid container padding-inline">
+        <div class="cards | flex-group">
+          <img
+            class="icon"
+            src="assets/shared/icon-compatible.svg"
+            alt="compatible"
+          />
+          <h2 class="fs-600 fw-bold uppercase clr-neutral-900">
+            Highly compatible
+          </h2>
+          <p class="fs-300 fw-regular clr-neutral-400">
+            Easy to use and works well with all major computer brands, gaming
+            consoles and mobile devices. Plug & play, no installation or driver
+            needed.
+          </p>
+        </div>
+        <div class="cards | flex-group">
+          <img
+            class="icon"
+            src="assets/shared/icon-bluetooth.svg"
+            alt="bluetooth"
+          />
+          <h2 class="fs-600 fw-bold uppercase clr-neutral-900">
+            Wireless with bluetooth
+          </h2>
+          <p class="fs-300 fw-regular clr-neutral-400">
+            Powerful 2.4G RF technology allows you to connect the cordless
+            keyboard from up to 30ft away. Simply plug the unifying receiver
+            into your computer.
+          </p>
+        </div>
+        <div class="cards | flex-group">
+          <img
+            class="icon"
+            src="assets/shared/icon-battery.svg"
+            alt="battery"
+          />
+          <h2 class="fs-600 fw-bold uppercase clr-neutral-900">
+            High capacity battery
+          </h2>
+          <p class="fs-300 fw-regular clr-neutral-400">
+            Equipped with a long-lasting built-in battery, you’ll never have to
+            spend a dime on replaceable ones.  Enjoy 40 hours of usage time
+            between charges.
+          </p>
+        </div>
+        <div class="cards | flex-group">
+          <img class="icon" src="assets/shared/icon-light.svg" alt="" />
+          <h2 class="fs-600 fw-bold uppercase clr-neutral-900">
+            RGB backlit modes
+          </h2>
+          <p class="fs-300 fw-regular clr-neutral-400">
+            Choose from 4 backlight brightness levels and adjustable breathing
+            speed. Each key glows intensely in the dark and helps you type in
+            low light conditions.
+          </p>
+        </div>
+      </section>
+    </main>
+    <!-- FOOTER -->
+    <footer class="footer | container">
+      <p class="fs-300 fw-regular clr-neutral-400">
+        <strong>Typemaster 2021 |</strong>
+        All Rights Reserved
+      </p>
+    </footer>
+    <script type="module" src="/main.js"></script>
+  </body>
 </html>

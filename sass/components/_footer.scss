@@ -1,0 +1,15 @@
+@use "../abstracts/" as *;
+
+.footer {
+  text-align: center;
+  margin-block-start: size(96);
+  margin-block-end: size(50);
+
+  @include mq(medium) {
+    margin-block-start: size(143);
+  }
+
+  @include mq(large) {
+    margin-block-start: size(128);
+  }
+}

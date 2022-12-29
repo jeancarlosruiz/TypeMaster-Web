@@ -1,0 +1,25 @@
+@use "../abstracts/" as *;
+
+.cards-grid {
+  --grid-row-gap: #{size(64)};
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  row-gap: var(--grid-row-gap, $grid-gap);
+  column-gap: var(--grid-column-gap, $grid-gap);
+
+  @include mq(medium) {
+    --grid-row-gap: #{size(69)};
+    --grid-column-gap: #{size(72)};
+
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  @include mq(large) {
+    --grid-row-gap: #{size(30)};
+
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+  }
+}

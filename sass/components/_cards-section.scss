@@ -1,0 +1,29 @@
+@use "../abstracts/" as *;
+
+.cards-section {
+  padding-block-start: size(111);
+
+  @include mq(medium) {
+    padding-block-start: size(143);
+  }
+
+  @include mq(large) {
+    padding-block-start: size(168);
+  }
+}
+
+.cards {
+  text-align: center;
+
+  &.flex-group {
+    flex-direction: column;
+  }
+
+  @include mq(medium) {
+    text-align: start;
+
+    &.flex-group {
+      align-items: flex-start;
+    }
+  }
+}

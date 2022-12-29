@@ -1,0 +1,22 @@
+@use "../abstracts/" as *;
+
+.hero-grid {
+  --grid-row-gap: #{size(64)};
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, auto);
+  align-items: center;
+  row-gap: var(--grid-row-gap, $grid-gap);
+  column-gap: var(--grid-column-gap, $grid-gap);
+
+  @include mq(medium) {
+    --grid-column-gap: #{size(8)};
+
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include mq(large) {
+    --grid-column-gap: #{size(125)};
+  }
+}

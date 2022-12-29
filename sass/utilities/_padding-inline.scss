@@ -1,0 +1,13 @@
+@use "../abstracts/" as *;
+
+.padding-inline {
+  padding-inline: 1.25em;
+
+  @include mq(medium) {
+    padding-inline: 2.438em;
+  }
+
+  @include mq(large) {
+    padding-inline: 0;
+  }
+}
